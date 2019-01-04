@@ -16,6 +16,9 @@ class BATTLETANKS_API ATank : public APawn
 public:
 	void AimAt(FVector HitLocation);
 
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -25,6 +28,9 @@ public:
 private:
 	// Sets default values for this pawn's properties
 	ATank();
+
+	UPROPERTY(EditAnywhere)
+	float LaunchSpeed = 100000; // TODO Find sensible launch speed
 
 protected:
 	// Called when the game starts or when spawned
