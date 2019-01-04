@@ -23,5 +23,4 @@ class BATTLETANKS_API ATankAIController : public AAIController
 
 		virtual void Tick(float DeltaTime) override;
 
-
 };
